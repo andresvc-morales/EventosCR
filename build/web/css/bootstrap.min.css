@@ -1,0 +1,174 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    min-height: 100vh;
+    color: #e0e0ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    padding: 40px;
+    width: 100%;
+    max-width: 460px;
+    animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+h1, h2 {
+    background: linear-gradient(90deg, #00ff88, #00dbde, #fc00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.2rem; }
+
+.btn-pro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding: 16px;
+    margin: 12px 0;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+.btn-pro:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 20px 50px rgba(102, 126, 234, 0.6);
+}
+
+.input-glow {
+    position: relative;
+    margin: 20px 0;
+}
+
+.input-glow i {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #00dbde;
+    font-size: 1.3rem;
+    z-index: 2;
+}
+
+.input-glow input {
+    width: 100%;
+    padding: 18px 18px 18px 55px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid transparent;
+    border-radius: 16px;
+    color: white;
+    font-size: 1.1rem;
+    transition: all 0.4s;
+}
+
+.input-glow input:focus {
+    outline: none;
+    border-color: #fc00ff;
+    box-shadow: 0 0 25px rgba(252, 0, 255, 0.5);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.input-glow input::placeholder {
+    color: #bbbbff;
+}
+
+.table-pro {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+}
+
+.table-pro th {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    padding: 18px;
+    text-align: left;
+    color: white;
+    font-weight: 600;
+}
+
+.table-pro td {
+    background: rgba(255,255,255,0.08);
+    padding: 18px;
+    border-radius: 12px;
+}
+
+.table-pro tr:hover td {
+    background: rgba(252, 0, 255, 0.2);
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+.btn-delete {
+    background: #ff006e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-delete:hover {
+    background: #ff4d8d;
+    transform: scale(1.1);
+}
+
+.volver {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.dark-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(255,255,255,0.2);
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 999;
+}
+
+@media (max-width: 480px) {
+    .glass { padding: 25px; }
+    h1 { font-size: 2.5rem; }
+}
